@@ -1,23 +1,70 @@
-# Painel de Estudos — Médico Legista
+# Painel Médico Legista com sincronização Supabase
 
-Estrutura inicial:
+## 1. Crie um projeto no Supabase
 
-- `index.html` — painel geral
-- `semanas/semana-01.html` — Semana 1
-- `semanas/semana-02.html` — Semana 2
-- `semanas/semana-03.html` — Semana 3
+Entre em supabase.com e crie um projeto.
 
-## Próximas semanas
+## 2. Crie a tabela
 
-Adicione os próximos arquivos dentro da pasta `semanas` com nomes padronizados:
+No Supabase:
+SQL Editor > New query
 
-- `semana-04.html`
-- `semana-05.html`
-- ...
-- `semana-19.html`
+Cole e execute o arquivo:
+`supabase/setup.sql`
 
-O `index.html` atual deixa as Semanas 4–19 como **Em breve**. Quando uma nova semana for adicionada, o painel precisará receber uma pequena atualização de status para habilitar o botão.
+## 3. Pegue suas chaves
 
-## Publicação
+No Supabase:
+Project Settings > API
 
-Suba toda esta estrutura para a raiz do repositório conectado ao Netlify. O arquivo principal deve continuar se chamando `index.html`.
+Copie:
+- Project URL
+- anon / public key
+
+Abra:
+`assets/supabase-config.js`
+
+Substitua:
+
+```js
+window.LEGISTA_SUPABASE_URL = "COLE_AQUI_SUA_PROJECT_URL";
+window.LEGISTA_SUPABASE_ANON_KEY = "COLE_AQUI_SUA_ANON_PUBLIC_KEY";
+```
+
+## 4. Suba os arquivos no GitHub
+
+Substitua seu `index.html`.
+
+Substitua as semanas 01–05 pelos arquivos desta pasta `semanas/`.
+
+Adicione:
+- `assets/supabase-config.js`
+- `assets/sync.js`
+- `supabase/setup.sql` (opcional no site; pode manter só como referência)
+
+## 5. Entre no painel
+
+Abra o site.
+Clique em `Entrar / sincronizar`.
+Crie uma conta.
+
+Use o mesmo login no celular e no computador.
+
+## Como o progresso é salvo
+
+O sistema continua usando o localStorage para funcionar rapidamente/offline.
+Quando você está logado, as chaves do estudo são sincronizadas com o Supabase.
+
+Na primeira sincronização:
+- se o Supabase estiver vazio, o progresso já existente neste navegador é enviado;
+- se já houver progresso na nuvem, ele é baixado;
+- chaves locais que ainda não existirem na nuvem são preservadas.
+
+Depois disso, novas alterações recebem horário e o valor mais recente é mantido.
+
+## Segurança
+
+A tabela usa Row Level Security (RLS).
+Cada usuário autenticado só consegue ler e alterar a própria linha.
+A `anon public key` pode ficar no front-end; a segurança depende das políticas RLS.
+Nunca coloque `service_role` no GitHub.
