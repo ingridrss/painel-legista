@@ -1,0 +1,183 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="theme-color" content="#171b20"><title>Painel de Estudos · Médico Legista</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet"><style>
+:root{--ink:#15191e;--ink2:#1c232b;--paper:#eee5cf;--paper2:#f7f1e3;--paper3:#e4d8bc;--text:#211c15;--soft:#665c4c;--red:#8a261c;--green:#365a4d;--gold:#ae8a50;--line:rgba(33,28,21,.17);--shadow:0 10px 30px rgba(0,0,0,.33)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);background-image:radial-gradient(circle at 12% 8%,rgba(174,138,80,.09),transparent 34%),radial-gradient(circle at 88% 76%,rgba(138,38,28,.11),transparent 40%);font-family:'Source Serif 4',Georgia,serif;color:var(--text);min-height:100vh}button,input{font:inherit}button{cursor:pointer}header{padding:30px 16px 47px;background:var(--ink2);border-bottom:3px double var(--gold);text-align:center;color:var(--paper);position:relative;overflow:hidden}header:after{content:'DOSSIÊ DE ESTUDOS';position:absolute;right:-48px;top:30px;transform:rotate(28deg);border:2px solid rgba(138,38,28,.58);color:rgba(196,79,62,.76);font:11px 'Special Elite',monospace;letter-spacing:2px;padding:6px 52px}.kicker{font:10px 'JetBrains Mono',monospace;letter-spacing:2.4px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}h1{font:clamp(27px,6vw,44px) 'Special Elite',monospace;margin:0 0 8px}header p{max-width:760px;margin:auto;color:#cfc5ad;font-size:14px;line-height:1.55}.wrap{max-width:1150px;margin:-25px auto 50px;padding:0 15px;position:relative;z-index:2}.overview{background:var(--paper);border:1px solid var(--line);border-radius:6px;box-shadow:var(--shadow);padding:15px;display:grid;grid-template-columns:1.25fr repeat(3,.75fr);gap:9px}.metric{background:var(--paper2);border:1px solid var(--line);border-radius:4px;padding:12px}.metric small{display:block;font:9px 'JetBrains Mono',monospace;letter-spacing:1px;text-transform:uppercase;color:var(--soft);margin-bottom:5px}.metric strong{font:21px 'Special Elite',monospace;color:var(--red)}.track{height:8px;background:var(--paper3);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:7px}.fill{height:100%;background:linear-gradient(90deg,var(--red),var(--gold));width:0;transition:.4s}.continue{margin:16px 0;background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:5px;box-shadow:0 6px 20px rgba(0,0,0,.22);padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:15px}.continue small{font:9px 'JetBrains Mono',monospace;color:var(--soft);text-transform:uppercase;letter-spacing:1px}.continue h2{font:22px 'Special Elite',monospace;color:var(--red);margin:3px 0 3px}.continue p{margin:0;color:var(--soft);font-size:13px}.continue a{flex:0 0 auto;text-decoration:none;background:var(--ink2);color:var(--paper);padding:10px 14px;border-radius:4px;font:10px 'JetBrains Mono',monospace}.continue a:hover{color:var(--gold)}.toolbar{background:var(--paper);border:1px solid var(--line);border-radius:5px;padding:10px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;margin-bottom:15px}.toolbar input{min-width:0;padding:10px;border:1px solid var(--line);background:var(--paper2);border-radius:3px;color:var(--text)}.toolbar button{border:1px solid var(--line);background:var(--paper2);border-radius:3px;padding:9px 12px;font:10px 'JetBrains Mono',monospace;color:var(--text)}.phase-title{font:22px 'Special Elite',monospace;color:var(--paper);margin:26px 0 9px;border-bottom:1px solid rgba(238,229,207,.22);padding-bottom:6px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.week{background:var(--paper);border:1px solid var(--line);border-radius:6px;overflow:hidden;box-shadow:0 7px 20px rgba(0,0,0,.23);display:flex;flex-direction:column;min-height:225px;position:relative}.week.available{border-top:4px solid var(--green)}.week.soon{opacity:.78;border-top:4px solid var(--soft)}.week-top{padding:14px 14px 9px;display:flex;gap:10px;align-items:flex-start}.num{width:42px;height:42px;flex:0 0 42px;border-radius:50%;border:2px solid var(--red);display:grid;place-items:center;font:15px 'Special Elite',monospace;color:var(--red);transform:rotate(-5deg)}.available .num{border-color:var(--green);color:var(--green)}.week h3{margin:1px 0 4px;font:17px 'Special Elite',monospace;line-height:1.2}.area{font:9px 'JetBrains Mono',monospace;color:var(--soft);text-transform:uppercase}.body{padding:0 14px 11px;font-size:13px;line-height:1.42;color:var(--soft);flex:1}.status{display:flex;align-items:center;gap:6px;margin-top:8px;font:9px 'JetBrains Mono',monospace;text-transform:uppercase}.status.ready{color:var(--green)}.status.wait{color:var(--soft)}.card-progress{margin-top:9px}.card-progress .track{height:6px}.card-progress small{display:block;margin-top:4px;font:9px 'JetBrains Mono',monospace;color:var(--soft)}.actions{border-top:1px solid var(--line);padding:10px 14px;display:flex;justify-content:space-between;gap:8px;align-items:center}.edital{font:9px 'JetBrains Mono',monospace;color:var(--soft)}.open{display:inline-block;text-decoration:none;background:var(--ink2);color:var(--paper);border-radius:3px;padding:8px 10px;font:9px 'JetBrains Mono',monospace}.open:hover{color:var(--gold)}.locked{font:9px 'JetBrains Mono',monospace;color:var(--soft);border:1px dashed var(--line);padding:7px 9px;border-radius:3px}.info{margin-top:24px;background:var(--paper);border:1px solid var(--line);border-radius:5px;padding:15px;line-height:1.55;box-shadow:0 6px 18px rgba(0,0,0,.18)}.info h2{font:20px 'Special Elite',monospace;color:var(--red);margin:0 0 7px}.info code{font-family:'JetBrains Mono',monospace;background:var(--paper2);border:1px solid var(--line);padding:2px 5px;border-radius:3px}.empty{display:none;background:var(--paper);padding:22px;text-align:center;color:var(--soft);border-radius:5px}.footer{text-align:center;color:#756a58;font:9px 'JetBrains Mono',monospace;padding:0 15px 28px}@media(max-width:930px){.overview{grid-template-columns:1fr 1fr}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}header:after{display:none}}@media(max-width:620px){.wrap{padding:0 9px}.overview{grid-template-columns:1fr 1fr;padding:9px;gap:6px}.metric{padding:9px}.metric strong{font-size:17px}.continue{display:block}.continue a{display:inline-block;margin-top:10px}.grid{grid-template-columns:1fr}.toolbar{grid-template-columns:1fr}.phase-title{font-size:20px}}</style></head><body><header><div class="kicker">Concurso Médico Legista · Plano de Estudos 2026</div><h1>PAINEL DE ESTUDOS</h1><p>Um único lugar para acompanhar as 19 semanas, continuar de onde parou e abrir cada dossiê semanal.</p></header><main class="wrap"><section class="overview"><div class="metric"><small>Progresso geral</small><strong id="overallPct">0%</strong><div class="track"><div class="fill" id="overallFill"></div></div></div><div class="metric"><small>Semanas disponíveis</small><strong id="availableWeeks">verificando…</strong></div><div class="metric"><small>Semanas concluídas</small><strong id="doneWeeks">0</strong></div><div class="metric"><small>Conteúdo teórico</small><strong>19 semanas</strong></div></section><section class="continue" id="continueBox"></section><section class="toolbar"><input id="search" type="search" placeholder="Buscar semana, tema ou área"><button id="onlyReady" type="button">Mostrar disponíveis</button></section><div id="weeks"></div><div class="empty" id="empty">Nenhuma semana corresponde ao filtro.</div><section class="info"><h2>Como adicionar as próximas semanas</h2>
+    <p><b>Este é o painel definitivo.</b> A partir de agora, você não precisa substituir o <code>index.html</code> quando uma nova semana for criada.</p>
+    <p>Para liberar uma semana, basta enviar o arquivo com o nome padronizado para a pasta <code>semanas/</code>. Exemplo: <code>semana-05.html</code>. Ao abrir ou atualizar o painel, ele verifica automaticamente se cada arquivo de <code>semana-01.html</code> até <code>semana-19.html</code> existe no GitHub Pages.</p>
+    <p><b>Importante:</b> a detecção automática funciona quando o painel está publicado (GitHub Pages/Netlify). O progresso continua salvo neste navegador.</p></section></main><div class="footer">painel médico-legista · dados salvos localmente neste navegador</div><script>
+const WEEK_DATA=[{"n": 1, "title": "Traumatologia forense", "area": "Medicina Forense", "edital": "1.1", "desc": "Perfurantes, cortantes, contundentes e mecanismos mistos", "status": "disponivel", "file": "semanas/semana-01.html"}, {"n": 2, "title": "Agentes físicos não mecânicos", "area": "Medicina Forense", "edital": "1.2", "desc": "Temperatura, eletricidade, pressão, explosões e radiações", "status": "disponivel", "file": "semanas/semana-02.html"}, {"n": 3, "title": "Asfixiologia", "area": "Medicina Forense", "edital": "1.3", "desc": "Constrições cervicais, sufocações, confinamento, soterramento e afogamento", "status": "disponivel", "file": "semanas/semana-03.html"}, {"n": 4, "title": "Tortura, aparelho locomotor e dano corporal", "area": "Medicina Forense", "edital": "1.4–1.5", "desc": "Avaliação da tortura, função locomotora e dano corporal", "status": "disponivel", "file": "semanas/semana-04.html"}, {"n": 5, "title": "Identificação humana e pessoas desaparecidas", "area": "Antropologia Forense", "edital": "2.1–2.2", "desc": "Perfil biológico, exumação, antropometria e identificação", "status": "embreve", "file": null}, {"n": 6, "title": "Morte e perinecroscopia", "area": "Tanatologia Forense", "edital": "3.1–3.3", "desc": "Conceitos de morte e exame do local", "status": "embreve", "file": null}, {"n": 7, "title": "Necropsia, cronotanatognose e tafonomia", "area": "Tanatologia Forense", "edital": "3.4–3.5", "desc": "Exame cadavérico e transformações pós-morte", "status": "embreve", "file": null}, {"n": 8, "title": "Fundamentos e embriaguez", "area": "Toxicologia Forense", "edital": "4.1–4.2", "desc": "Toxicocinética, matrizes e avaliação da intoxicação", "status": "embreve", "file": null}, {"n": 9, "title": "Dependência, cáusticos e venenos", "area": "Toxicologia Forense", "edital": "4.3–4.4", "desc": "Dependência química, toxidromes e lesões tóxicas", "status": "embreve", "file": null}, {"n": 10, "title": "Identificação genética e RIBPG", "area": "Genética Forense", "edital": "5.1–5.2", "desc": "Perfis genéticos, parentesco e bancos de DNA", "status": "embreve", "file": null}, {"n": 11, "title": "Crimes contra a liberdade sexual", "area": "Sexologia Forense", "edital": "6.1", "desc": "Exame médico-legal, vestígios e interpretação", "status": "embreve", "file": null}, {"n": 12, "title": "Abortamento, infanticídio e atendimento integral", "area": "Sexologia Forense", "edital": "6.1–6.2", "desc": "Diagnóstico pericial e legislação assistencial", "status": "embreve", "file": null}, {"n": 13, "title": "Imputabilidade e capacidade civil", "area": "Psicopatologia Forense", "edital": "7", "desc": "Doença mental, responsabilidade penal e autonomia civil", "status": "embreve", "file": null}, {"n": 14, "title": "Acidentes e perícias securitárias", "area": "Infortunística", "edital": "8.1–8.3", "desc": "Acidentes, doenças ocupacionais, nexo e incapacidade", "status": "embreve", "file": null}, {"n": 15, "title": "Entrevista, transtornos e sanidade mental", "area": "Noções de Psiquiatria", "edital": "9.1–9.4", "desc": "Avaliação psiquiátrica aplicada à perícia", "status": "embreve", "file": null}, {"n": 16, "title": "Patologia geral das lesões", "area": "Noções de Patologia", "edital": "10.1–10.3", "desc": "Bases anatomopatológicas, inflamação e reparo", "status": "embreve", "file": null}, {"n": 17, "title": "Fenômenos cadavéricos e patologia forense", "area": "Noções de Patologia", "edital": "10.4–10.5", "desc": "Autólise, alterações pós-morte e patologia forense", "status": "embreve", "file": null}, {"n": 18, "title": "Imagem e equipamentos", "area": "Radiologia Forense", "edital": "11.1–11.3", "desc": "Fundamentos, modalidades e uso post mortem", "status": "embreve", "file": null}, {"n": 19, "title": "Identificação, idade, tecidos moles e contrastes", "area": "Radiologia Forense", "edital": "11.4–11.7", "desc": "Aplicações identificadoras e encerramento do conteúdo", "status": "embreve", "file": null}];
+const STORAGE_KEYS={
+  1:'medlegista-semana1-v4',
+  2:'medlegista-semana2-v3-slides',
+  3:'medlegista-semana3-v2',
+  4:'medlegista-semana4-v2'
+};
+
+let readyOnly=false;
+let detectionFinished=false;
+
+function weekPath(n){
+  return `semanas/semana-${String(n).padStart(2,'0')}.html`;
+}
+
+function stateFor(n){
+  const candidates=[
+    STORAGE_KEYS[n],
+    `medlegista-semana${n}-v1`,
+    `medlegista-semana${n}`,
+    `legista_semana_${String(n).padStart(2,'0')}`
+  ].filter(Boolean);
+  for(const k of candidates){
+    try{
+      const raw=localStorage.getItem(k);
+      if(raw) return JSON.parse(raw);
+    }catch(e){}
+  }
+  return null;
+}
+
+function progressFor(n){
+  const s=stateFor(n);
+  if(!s) return 0;
+
+  if(typeof s.progress==='number'){
+    return Math.max(0,Math.min(100,Math.round(s.progress)));
+  }
+  if(s.completed && typeof s.completed==='object'){
+    const vals=Object.values(s.completed);
+    if(vals.length){
+      const done=vals.filter(Boolean).length;
+      return Math.round(done/vals.length*100);
+    }
+  }
+  if(Array.isArray(s.completedDays)){
+    return Math.round(s.completedDays.length/7*100);
+  }
+  return 0;
+}
+
+async function fileExists(url){
+  try{
+    const sep=url.includes('?')?'&':'?';
+    const response=await fetch(`${url}${sep}check=${Date.now()}`,{
+      method:'GET',
+      cache:'no-store',
+      redirect:'follow'
+    });
+    return response.ok;
+  }catch(e){
+    return false;
+  }
+}
+
+async function detectWeeks(){
+  const checks=WEEK_DATA.map(async w=>{
+    const path=weekPath(w.n);
+    const exists=await fileExists(path);
+    w.status=exists?'disponivel':'embreve';
+    w.file=exists?path:null;
+  });
+
+  await Promise.all(checks);
+  detectionFinished=true;
+  render();
+}
+
+function grouped(data){
+  const o={};
+  data.forEach(w=>(o[w.area]??=[]).push(w));
+  return o;
+}
+
+function render(){
+  const q=document.getElementById('search').value.toLowerCase().trim();
+  let visible=0,html='';
+
+  Object.entries(grouped(WEEK_DATA)).forEach(([area,list])=>{
+    let cards='';
+    list.forEach(w=>{
+      if(readyOnly&&w.status!=='disponivel')return;
+      const hay=(w.title+' '+w.area+' '+w.edital+' '+w.desc).toLowerCase();
+      if(q&&!hay.includes(q))return;
+
+      visible++;
+      const available=w.status==='disponivel';
+      const p=available?progressFor(w.n):0;
+      const waitLabel=detectionFinished?'○ Em breve':'◌ Verificando';
+
+      cards+=`<article class="week ${available?'available':'soon'}">
+        <div class="week-top">
+          <span class="num">${String(w.n).padStart(2,'0')}</span>
+          <div><h3>${w.title}</h3><div class="area">${w.area}</div></div>
+        </div>
+        <div class="body">
+          ${w.desc}
+          <div class="status ${available?'ready':'wait'}">${available?'● Disponível':waitLabel}</div>
+          ${available?`<div class="card-progress"><div class="track"><div class="fill" style="width:${p}%"></div></div><small>${p}% concluído</small></div>`:''}
+        </div>
+        <div class="actions">
+          <span class="edital">EDITAL ${w.edital}</span>
+          ${available?`<a class="open" href="${w.file}" data-week="${w.n}">ABRIR SEMANA</a>`:`<span class="locked">${detectionFinished?'AGUARDANDO':'VERIFICANDO'}</span>`}
+        </div>
+      </article>`;
+    });
+
+    if(cards) html+=`<h2 class="phase-title">${area}</h2><section class="grid">${cards}</section>`;
+  });
+
+  document.getElementById('weeks').innerHTML=html;
+  document.getElementById('empty').style.display=visible?'none':'block';
+  bindLinks();
+  metrics();
+}
+
+function metrics(){
+  const ready=WEEK_DATA.filter(w=>w.status==='disponivel');
+  const totalProgress=ready.reduce((s,w)=>s+progressFor(w.n),0);
+  const pct=ready.length?Math.round(totalProgress/ready.length):0;
+  const done=ready.filter(w=>progressFor(w.n)===100).length;
+
+  document.getElementById('availableWeeks').textContent=detectionFinished?`${ready.length} / 19`:'verificando…';
+  document.getElementById('overallPct').textContent=pct+'%';
+  document.getElementById('overallFill').style.width=pct+'%';
+  document.getElementById('doneWeeks').textContent=done;
+
+  let last=Number(localStorage.getItem('medlegista-last-week')||0);
+  let target=ready.find(w=>w.n===last);
+  if(!target) target=ready.find(w=>progressFor(w.n)<100)||ready[ready.length-1];
+
+  const box=document.getElementById('continueBox');
+
+  if(!detectionFinished && !ready.length){
+    box.innerHTML='<div><small>Painel</small><h2>Verificando semanas publicadas…</h2><p>Isso leva apenas alguns instantes.</p></div>';
+    return;
+  }
+
+  const p=target?progressFor(target.n):0;
+  box.innerHTML=target
+    ?`<div><small>Continuar estudando</small><h2>Semana ${target.n} · ${target.title}</h2><p>${p}% concluído · ${target.area}</p></div><a href="${target.file}" data-week="${target.n}">CONTINUAR →</a>`
+    :'<div><h2>Nenhuma semana publicada ainda</h2><p>Adicione <code>semanas/semana-01.html</code> para começar.</p></div>';
+  bindLinks();
+}
+
+function bindLinks(){
+  document.querySelectorAll('[data-week]').forEach(a=>{
+    if(a.dataset.bound)return;
+    a.dataset.bound='1';
+    a.addEventListener('click',()=>localStorage.setItem('medlegista-last-week',a.dataset.week));
+  });
+}
+
+document.getElementById('search').addEventListener('input',render);
+document.getElementById('onlyReady').addEventListener('click',e=>{
+  readyOnly=!readyOnly;
+  e.target.textContent=readyOnly?'Mostrar todas':'Mostrar disponíveis';
+  render();
+});
+
+window.addEventListener('pageshow',()=>{
+  render();
+  detectWeeks();
+});
+
+render();
+detectWeeks();
+</script></body></html>
