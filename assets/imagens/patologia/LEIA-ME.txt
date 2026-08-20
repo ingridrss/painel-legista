@@ -1,0 +1,8 @@
+Pasta de imagens: patologia
+
+Coloque aqui as imagens relacionadas a este tema.
+
+Exemplo de caminho usado dentro de um arquivo em /semanas:
+../assets/imagens/patologia/nome-da-imagem.jpg
+
+Você pode apagar este arquivo depois que houver pelo menos uma imagem nesta pasta.

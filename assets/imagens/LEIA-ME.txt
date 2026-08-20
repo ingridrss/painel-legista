@@ -1,0 +1,13 @@
+PASTA DE IMAGENS DO PAINEL MÉDICO LEGISTA
+
+As subpastas existem porque cada uma contém um arquivo LEIA-ME.txt.
+O GitHub não mantém diretórios vazios.
+
+Para adicionar uma imagem pelo site do GitHub:
+1. Abra assets/imagens.
+2. Entre na pasta do assunto.
+3. Clique em Add file > Upload files.
+4. Arraste a imagem.
+5. Clique em Commit changes.
+
+Não é necessário mover a imagem depois: envie-a já dentro da pasta correta.
