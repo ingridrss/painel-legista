@@ -1,0 +1,7 @@
+Coloque as imagens nas subpastas por assunto.
+
+Exemplo:
+assets/imagens/antropologia/pelve-sexo.jpg
+
+Dentro de um arquivo em semanas/, use:
+../assets/imagens/antropologia/pelve-sexo.jpg
